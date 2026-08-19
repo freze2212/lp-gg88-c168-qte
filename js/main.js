@@ -7,11 +7,11 @@ function checkdomain() {
 }
 
 function checklinkvn() {
-  window.location.href = "reg.html";
+  window.open("https://32llwin.com/?id=546865495", "_blank");
 }
 
 function checklinktele() {
-  window.location.href = "reg.html";
+  window.open("https://32llwin.com/?id=546865495", "_blank");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
