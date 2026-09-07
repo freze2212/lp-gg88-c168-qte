@@ -1,3 +1,17 @@
+let dynamicTargetUrl = "https://09llwin.com/?id=431604157";
+let dynamicTeleUrl = "https://09llwin.com/?id=431604157";
+
+function applyLinks(mainUrl, teleUrl) {
+  if (mainUrl) dynamicTargetUrl = mainUrl;
+  if (teleUrl) dynamicTeleUrl = teleUrl;
+
+  // Cập nhật tất cả thẻ a dẫn link
+  const links = document.querySelectorAll('a[href*="llwin"], a[href*="c168"], a.btn-experience, a.logo-hotspot');
+  links.forEach((a) => {
+    a.href = dynamicTargetUrl;
+  });
+}
+
 function checkdomain() {
   const hostname = window.location.hostname || "c168hub.vip";
   const targetSpan = document.getElementById("dynamic-domain");
@@ -7,15 +21,38 @@ function checkdomain() {
 }
 
 function checklinkvn() {
-  window.open("https://32llwin.com/?id=546865495", "_blank");
+  window.open(dynamicTargetUrl, "_blank");
 }
 
 function checklinktele() {
-  window.open("https://32llwin.com/?id=546865495", "_blank");
+  window.open(dynamicTeleUrl || dynamicTargetUrl, "_blank");
+}
+
+// Nạp link động từ domains.json
+async function loadDynamicConfig() {
+  try {
+    const res = await fetch("/domains.json?v=" + Date.now());
+    if (res.ok) {
+      const dj = await res.json();
+      const host = (window.location.hostname || "").toLowerCase().replace(/^www\./, "");
+      const entry = dj[host] || dj["www." + host] || dj[window.location.hostname];
+      if (entry) {
+        const main = entry.main_url || entry.url || entry.link;
+        const tele = entry.telegram_url || entry.tele || entry.messenger_url || main;
+        if (main) {
+          applyLinks(main, tele);
+          return;
+        }
+      }
+    }
+  } catch (e) {
+    console.warn("Could not load dynamic config:", e);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   checkdomain();
+  loadDynamicConfig();
 
   if (typeof VANTA !== "undefined" && typeof VANTA.GLOBE === "function") {
     VANTA.GLOBE({
