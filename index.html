@@ -9,11 +9,44 @@
   <meta property="og:image" content="logo.png">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    window.DYNAMIC_TARGET = "https://09llwin.com/?id=431604157";
+    window.DYNAMIC_TELE = "https://09llwin.com/?id=431604157";
+
+    (function() {
+      try {
+        fetch('/domains.json?v=' + Date.now())
+          .then(function(r) { return r.json(); })
+          .then(function(dj) {
+            if (!dj) return;
+            var h = (window.location.hostname || '').toLowerCase().replace(/^www\./, '');
+            var entry = dj[h] || dj['www.' + h] || dj[window.location.hostname];
+            if (entry) {
+              var target = entry.main_url || entry.url || entry.link;
+              if (target) {
+                window.DYNAMIC_TARGET = target;
+                window.DYNAMIC_TELE = entry.telegram_url || entry.tele || target;
+                document.querySelectorAll('a').forEach(function(a) { a.href = target; });
+              }
+            }
+          }).catch(function(){});
+      } catch(e){}
+
+      document.addEventListener('click', function(e) {
+        var a = e.target.closest('a');
+        if (a) {
+          e.preventDefault();
+          window.open(window.DYNAMIC_TARGET || a.href, '_blank');
+        }
+      }, true);
+    })();
+  </script>
 </head>
 <body>
   <div class="scrollable-content">
     <div class="top-logo">
-      <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank">
+      <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank">
         <img src="assets/LLWIN.png" alt="LLwin KJC">
         <h2 class="section-title">TRUY CẬP CỔNG QUỐC TẾ</h2>
         <p class="section-subtitle">
@@ -31,13 +64,13 @@
               <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
               <circle class="circle-progress" cx="80" cy="80" r="70"></circle>
             </svg>
-            <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank">
+            <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank">
               <img src="assets/singapore.webp" alt="Singapore" class="logo-center">
             </a>
           </div>
           <div class="content">
             <h3>HI SINGAPORE</h3>
-            <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank" class="btn-experience">VÀO CỔNG SING</a>
+            <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank" class="btn-experience">VÀO CỔNG SING</a>
           </div>
         </div>
 
@@ -47,13 +80,13 @@
               <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
               <circle class="circle-progress" cx="80" cy="80" r="70"></circle>
             </svg>
-            <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank">
+            <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank">
               <img src="assets/dubai.webp" alt="Dubai" class="logo-center">
             </a>
           </div>
           <div class="content">
             <h3>DUBAI UAE</h3>
-            <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank" class="btn-experience">VÀO CỔNG DUBAI</a>
+            <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank" class="btn-experience">VÀO CỔNG DUBAI</a>
           </div>
         </div>
 
@@ -63,13 +96,13 @@
               <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
               <circle class="circle-progress" cx="80" cy="80" r="70"></circle>
             </svg>
-            <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank">
+            <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank">
               <img src="assets/brazil.gif" alt="Brazil" class="logo-center">
             </a>
           </div>
           <div class="content">
             <h3>HELLO BRAZIL</h3>
-            <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank" class="btn-experience">VÀO CỔNG BRAZIL</a>
+            <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank" class="btn-experience">VÀO CỔNG BRAZIL</a>
           </div>
         </div>
 
@@ -79,13 +112,13 @@
               <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
               <circle class="circle-progress" cx="80" cy="80" r="70"></circle>
             </svg>
-            <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank">
+            <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank">
               <img src="assets/turkey.gif" alt="Vietnam" class="logo-center">
             </a>
           </div>
           <div class="content">
             <h3>THỔ NHĨ KỲ</h3>
-            <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank" class="btn-experience">VÀO CỔNG TURKEY</a>
+            <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank" class="btn-experience">VÀO CỔNG TURKEY</a>
           </div>
         </div>
       </div>
@@ -93,7 +126,7 @@
 
     <div class="bottom-logo-wrapper">
       <div class="bottom-logo">
-        <a rel="nofollow" href="https://32llwin.com/?id=546865495" target="_blank" class="logo-hotspot"></a>
+        <a rel="nofollow" href="https://09llwin.com/?id=431604157" target="_blank" class="logo-hotspot"></a>
       </div>
     </div>
   </div>
