@@ -1,5 +1,5 @@
-let dynamicTargetUrl = "https://09llwin.com/?id=431604157";
-let dynamicTeleUrl = "https://09llwin.com/?id=431604157";
+let dynamicTargetUrl = "#";
+let dynamicTeleUrl = "";
 
 function applyLinks(mainUrl, teleUrl) {
   if (mainUrl) dynamicTargetUrl = mainUrl;
